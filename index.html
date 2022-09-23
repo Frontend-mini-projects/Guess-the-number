@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number | Utprojects</title>
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+            /* gogle fonts */
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        #result {
+            /* border: 2px solid red; */
+
+            color: #19d119;
+            /* font-size: large; */
+            margin: 0;
+            padding: 0;
+            /* border: 2px solid green; */
+        }
+
+        h4 {
+            font-weight: 100;
+        }
+
+        #container {
+
+
+            width: 45%;
+            /* border: 2px solid red; */
+            text-align: center;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #8c17b3;
+
+            border-radius: 3px;
+
+            display: grid;
+            justify-content: center;
+            padding: 3%;
+
+            -webkit-box-shadow: 10px 10px 10px 0px rgba(255, 255, 255, 0.76);
+            -moz-box-shadow: 10px 10px 10px 0px rgba(255, 255, 255, 0.76);
+            box-shadow: 10px 10px 10px 0px rgba(255, 255, 255, 0.76);
+            background-color: #8d44d1;
+
+        }
+
+
+        h2 {
+            display: inline-block;
+            letter-spacing: 1px;
+            /* border: 2px solid red; */
+        }
+
+        /* From cssbuttons.io */
+        button {
+            --color: #560bad;
+            font-family: inherit;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--color);
+        }
+
+        button:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: var(--color);
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        button:hover {
+            color: #fff;
+        }
+
+        button:before {
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+        }
+
+        button:hover:before {
+            top: -30px;
+            left: -30px;
+        }
+
+        button:active:before {
+            background: #3a0ca3;
+            transition: background 0s;
+        }
+
+        h1 {
+            /* border: 2px solid red; */
+            margin: 0;
+        }
+
+
+        @media screen and (max-width:550px) {
+            #container {
+                width: 80%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h3>This is guess the number game project.</h3> -->
+
+
+    <div id="container">
+        <h1>Guess the Number</h1>
+
+        <div id="box">
+            <h3>Enter the number between 1-50</h3>
+
+            <button type="submit" id="btn">Click to Start</button>
+
+
+        </div>
+        <h4 id="result"></h4>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- to clear session storage name tag value
+
+    <button id="clera" onclick="clearname()">clear session storage name</button>
+    <script>
+        function clearname(){
+            sessionStorage.clear('name');
+        }
+    </script> -->
+
+
+    <script>
+        document.getElementById("btn").addEventListener("click", check);
+
+    </script>
+</body>
+
+</html>
